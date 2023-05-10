@@ -9,7 +9,7 @@ using (PlayerContext db  = new PlayerContext())
     int gamePlayedNumber = random.Next(1, 100);
     int gameWonNumber = random.Next(1, gamePlayedNumber +1);
 
-    Player newPlayer = new Player { Name = "Cristiano", Surname = "Ronaldo", Id = "ADG485", Score = scoreNumber, GameNumberPlayed = gamePlayedNumber, GameWon = gameWonNumber };
+    Player newPlayer = new Player("Cristiano", "Ronaldo", "AGDGG56", scoreNumber, gamePlayedNumber, gameWonNumber);
 
     db.Add(newPlayer);
     db.SaveChanges();

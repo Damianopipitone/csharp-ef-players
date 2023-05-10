@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -32,9 +33,22 @@ namespace C__Entity_Framework_Players
             this.Name = Name;
             this.Surname = surname;
             this.Score = Score;
-            this.Score = Score;
+            this.Id = Id;
             this.GameNumberPlayed = GameNumberPlayed;
             this.GameWon = GameWon;
+
+            
+        }
+
+        public override string ToString()
+        {
+            string rapprsting = "Nome: " + Name + "\n";
+            rapprsting += "Cognome: " + Surname + "\n";
+            rapprsting += "Id: " + Id + "\n";
+            rapprsting += "Punteggio: " + Score + "\n";
+            rapprsting += "Partite giocate: " + GameNumberPlayed + "\n";
+            rapprsting += "Partite vinte: " + GameWon + "\n";
+            return rapprsting;
         }
     }
 }
