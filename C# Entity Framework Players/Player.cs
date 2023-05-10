@@ -24,5 +24,17 @@ namespace C__Entity_Framework_Players
         public int GameNumberPlayed { get; set; }
 
         public int GameWon { get; set; }
+
+        // COSTRUTTORE
+
+        public Player(string Name, string surname, string Id, int Score, int GameNumberPlayed, int GameWon)
+        {
+            this.Name = Name;
+            this.Surname = surname;
+            this.Score = Score;
+            this.Score = Score;
+            this.GameNumberPlayed = GameNumberPlayed;
+            this.GameWon = GameWon;
+        }
     }
 }
